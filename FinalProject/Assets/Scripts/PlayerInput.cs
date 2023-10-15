@@ -13,6 +13,18 @@ public class PlayerInput : MonoBehaviour
         movement = GetComponent<DiscreteMovement>();
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+
+        ItemWorld.SpawnItemWorld(new Vector3(0, -3), new Item {itemType = Item.ItemType.Chair, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, -3), new Item {itemType = Item.ItemType.Chair, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(3, -3), new Item {itemType = Item.ItemType.Chair, amount = 1});
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider){
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+        if (itemWorld != null){
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
     }
 
     void Update(){

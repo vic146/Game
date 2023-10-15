@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ItemAssets : MonoBehaviour
+{
+    public static ItemAssets Instance {get; private set;}
+
+    private void Awake(){
+        Debug.Log("1st");
+        Instance = this;
+    }
+    public Transform pfItemWorld;
+
+    public Sprite chairSprite;
+    public Sprite tableSprite;
+    public Sprite potSprite;
+    public Sprite bedSprite;
+    public Sprite pictureSprite;
+    public Sprite bookshelvesSprite;
+    public Sprite kitchenSprite;
+    
+}
