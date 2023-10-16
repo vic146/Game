@@ -12,12 +12,8 @@ public class ItemAssets : MonoBehaviour
     }
     public Transform pfItemWorld;
 
-    public Sprite chairSprite;
-    public Sprite tableSprite;
-    public Sprite potSprite;
-    public Sprite bedSprite;
-    public Sprite pictureSprite;
-    public Sprite bookshelvesSprite;
-    public Sprite kitchenSprite;
+    public Sprite carrotSprite; 
+     public Sprite cakeSprite;
+
     
 }
