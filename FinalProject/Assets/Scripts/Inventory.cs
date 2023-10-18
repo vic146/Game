@@ -10,9 +10,10 @@ public class Inventory
 
    public Inventory(){
     itemList = new List<Item>();
-
+   /*
     AddItem(new Item { itemType = Item.ItemType.Carrot, amount = 1 });
     AddItem(new Item { itemType = Item.ItemType.Cake, amount = 1 });
+    */
     Debug.Log(itemList.Count);
    }
 
