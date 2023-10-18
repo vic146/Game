@@ -9,6 +9,8 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] private Inventory inventory;
     [SerializeField] private Transform itemSlotContainer;
     [SerializeField] private Transform itemSlotTemplate;
+  
+    
 
     /*private void Start(){
         itemSlotContainer = transform.Find("itemSlotContainer");
@@ -35,6 +37,7 @@ public class UI_Inventory : MonoBehaviour
         int y = 0;
         float itemSlotCellSize = 150f;
         foreach (Item item in inventory.GetItemList()){
+            int itemPoints = item.amount ;
             Debug.Log("Here");
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);

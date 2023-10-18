@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerInput : MonoBehaviour
 { 
    [SerializeField] UI_Inventory uiInventory;
    [SerializeField] DiscreteMovement movement;
+   
    private Inventory inventory;
 
     void Awake(){
@@ -43,7 +46,9 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)){
             movement.Jump();
         }
-        
+        if(transform.position.y < -8){
+        SceneManager.LoadScene("Main Menu");
+        }
     }
     
 
