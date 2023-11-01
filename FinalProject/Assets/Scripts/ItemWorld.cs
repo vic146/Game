@@ -16,7 +16,6 @@ public class ItemWorld : MonoBehaviour
     }
     private Item item;
     private SpriteRenderer spriteRenderer;
-    [SerializeField] AudioClip clip;
 
     private void Awake(){
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,6 +32,5 @@ public class ItemWorld : MonoBehaviour
 
     public void DestroySelf(){
         Destroy(gameObject);
-        AudioSource.PlayClipAtPoint(clip, this.gameObject.transform.position);
     }
 }

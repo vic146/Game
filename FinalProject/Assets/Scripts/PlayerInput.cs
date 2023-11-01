@@ -9,7 +9,6 @@ public class PlayerInput : MonoBehaviour
 { 
    [SerializeField] UI_Inventory uiInventory;
    [SerializeField] DiscreteMovement movement;
-   
    private Inventory inventory;
 
     void Awake(){
